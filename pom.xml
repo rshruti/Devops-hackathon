@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>com.workfusion.ml</groupId>
         <artifactId>hypermodel-parent</artifactId>
         <version>9.2.0.11</version>
     </parent>
+
     <groupId>com.workfusion.lab</groupId>
     <artifactId>ml-sdk-lessons</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+
     <properties>
         <hypermodel.output.dir>${basedir}/deploy/</hypermodel.output.dir>
         <hypermodel.id>none</hypermodel.id>
@@ -17,11 +20,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipObfuscation>true</skipObfuscation>
     </properties>
+
     <modules>
         <module>lesson-utils</module>
         <module>lesson-1</module>
         <module>lesson-2</module>
     </modules>
+
     <dependencies>
         <dependency>
             <groupId>com.workfusion.ml</groupId>
@@ -40,12 +45,13 @@
             <version>2.5.1</version>
         </dependency>
     </dependencies>
-  <distributionManagement>
+    <distributionManagement>
   <repository>
     <id>nexus</id>
-    <url>http://13.235.135.16:8081/nexus/content/repositories/releases</url>
+    <url>http://18.232.135.98:8081/nexus/content/repositories/releases</url>
   </repository>
 </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -66,23 +72,15 @@
                     </execution>
                 </executions>
             </plugin>
-         <!--  <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>sonar-maven-plugin</artifactId>
-              <version>3.7.0</version>
-             </plugin> -->
-           <plugin>
-             <groupId>org.sonarsource.scanner.maven</groupId>
-             <artifactId>sonar-maven-plugin</artifactId>
-             <version>3.6.0.1398</version>
-                </plugin>
 
         </plugins>
     </build>
-  <repositories>
+    <repositories>
      <repository>
-      <id>incoming</id>
-      <url>https://watt-db1.workfusion.com/nexus/content/repositories/ml-sdk/</url>
+      <id>jboss</id>
+      <url>https://watt-db1.workfusion.com/nexus/content/repositories/ml-sdk</url>
      </repository>
     </repositories>
+
 </project>
+
