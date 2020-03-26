@@ -82,10 +82,4 @@
                  </configuration>
                 </plugin>
     </plugins>
-    <repositories>
-     <repository>
-      <id>jboss</id>
-      <url>https://watt-db1.workfusion.com/nexus/content/repositories/ml-sdk</url>
-     </repository>
-    </repositories>
-</project>
+    
