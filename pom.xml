@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>com.workfusion.ml</groupId>
         <artifactId>hypermodel-parent</artifactId>
         <version>9.2.0.11</version>
     </parent>
- <groupId>com.workfusion.lab</groupId>
+
+    <groupId>com.workfusion.lab</groupId>
     <artifactId>ml-sdk-lessons</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-	<properties>
+
+    <properties>
         <hypermodel.output.dir>${basedir}/deploy/</hypermodel.output.dir>
         <hypermodel.id>none</hypermodel.id>
         <ml.sdk.version>9.2.0.11</ml.sdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipObfuscation>true</skipObfuscation>
     </properties>
-<modules>
+
+    <modules>
         <module>lesson-utils</module>
         <module>lesson-1</module>
         <module>lesson-2</module>
     </modules>
-     <dependencies>
+
+    <dependencies>
         <dependency>
             <groupId>com.workfusion.ml</groupId>
             <artifactId>nlp-uima-hypermodel</artifactId>
