@@ -48,7 +48,7 @@
    <url>https://github.com/rshruti/Devops-hackathon.git</url>
    <developerConnection>scm:git:https://github.com/rshruti/Devops-hackathon.git</developerConnection>
     <tag>HEAD</tag>
-   </scm
+	</scm>
   <distributionManagement>
           <snapshotRepository>
               <id>nexus</id>
