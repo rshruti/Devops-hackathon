@@ -45,45 +45,41 @@
             <version>2.5.1</version>
         </dependency>
     </dependencies>
-    <scm>
-   <connection>scm:git:https://github.com/rshruti/Devops-hackathon.git</connection>
-   <url>https://github.com/rshruti/Devops-hackathon.git</url>
-   <developerConnection>scm:git:https://github.com/rshruti/Devops-hackathon.git</developerConnection>
-    <tag>HEAD</tag>
-	</scm>
-  <distributionManagement>
-          <snapshotRepository>
-              <id>nexus</id>
-              <url>http://3.91.41.144:8081/nexus/content/repositories/snapshots/</url>
-          </snapshotRepository>
-          <repository>
-              <id>nexus</id>
-              <url>http://3.91.41.144:8081/nexus/content/repositories/Release2/</url>
-          </repository>
-       </distributionManagement>
- <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.2</version>
-        <configuration> <!-- Compile java 7 compatible bytecode -->
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-      </plugin>
-      <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-release-plugin</artifactId>
-              <version>3.0.0-M1</version>
+    <distributionManagement>
+  <repository>
+    <id>nexus</id>
+    <url>http://18.232.135.98:8081/nexus/content/repositories/releases</url>
+  </repository>
+</distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
                 <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <pushChanges>false</pushChanges>
-                    <localCheckout>true</localCheckout>
-                    <tagNameFormat>@{project.version}</tagNameFormat>
-                 </configuration>
-                </plugin>
-    </plugins>
-	  </build>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>add-classifier</id>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+    <repositories>
+     <repository>
+      <id>jboss</id>
+      <url>https://watt-db1.workfusion.com/nexus/content/repositories/ml-sdk</url>
+     </repository>
+    </repositories>
+
 </project>
-    
