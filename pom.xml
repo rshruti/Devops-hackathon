@@ -12,12 +12,7 @@
     <artifactId>ml-sdk-lessons</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-	<scm>
-   <connection>scm:git:https://github.com/rshruti/Devops-hackathon.git</connection>
-   <url>https://github.com/rshruti/Devops-hackathon</url>
-   <developerConnection>scm:git:https://github.com/rshruti/Devops-hackathon.git</developerConnection>
-        </scm>
-  <properties>
+	<properties>
         <hypermodel.output.dir>${basedir}/deploy/</hypermodel.output.dir>
         <hypermodel.id>none</hypermodel.id>
         <ml.sdk.version>9.2.0.11</ml.sdk.version>
@@ -30,7 +25,11 @@
         <module>lesson-1</module>
         <module>lesson-2</module>
     </modules>
-
+    <scm>
+   <connection>scm:git:https://github.com/rshruti/Devops-hackathon.git</connection>
+   <url>https://github.com/rshruti/Devops-hackathon</url>
+   <developerConnection>scm:git:https://github.com/rshruti/Devops-hackathon.git</developerConnection>
+        </scm>
     <dependencies>
         <dependency>
             <groupId>com.workfusion.ml</groupId>
